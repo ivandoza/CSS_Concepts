@@ -1,0 +1,61 @@
+body {
+  width: 60em;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(2, 1fr));
+  grid-template-areas: 
+  "verde verde verde"
+  "amarillo rojo azul"
+  "naranja naranja azul" ;
+
+}
+
+section {
+  padding: 2em;
+  margin: 1em;
+}
+
+#green {
+  grid-area: verde;
+  background-color: #8ffda7;
+  
+}
+
+#orange {
+  grid-area: naranja;
+  background-color: #ffc788;
+  
+}
+
+#yellow {
+  grid-area: amarillo;
+  background-color: #ffff92;
+}
+
+#red {
+  grid-area: rojo;
+  background-color: #ff919c;
+}
+
+#blue {
+  grid-area: azul;
+  background-color: #98d2ff;
+}
+
+ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 1fr, 1fr;
+}
+
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
+}
