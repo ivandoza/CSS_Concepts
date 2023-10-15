@@ -1,0 +1,123 @@
+body {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}  
+
+section {
+    width: 25%;
+    box-shadow: 0 5px 9px 0 rgba(20, 20, 20, 0.336);
+    text-align: center;
+    background-color: #d4d1d1ec;
+    border-radius: 8px;
+    min-width: 35ch;
+    
+}
+
+.top {
+    display: grid;
+    grid-template-rows: 21px 21px;
+    grid-template-areas: 
+    "avatar name name . . points"
+    "avatar date date . . points";
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    overflow: hidden;
+}
+
+.name-card {
+    grid-area: name;
+}
+
+.avatar-image {
+    grid-area: avatar;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+.date {
+    grid-area: date;
+    color: rgba(255, 255, 255, 0.712);
+}
+
+.points{
+    grid-area: points;
+    width: 15px;
+
+}
+
+.text-description {
+    max-width: fit-content;
+    min-height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+span {
+    font-weight: bold;
+}
+
+.actions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px;
+    width: 20%;
+    padding: 10px;
+    gap: 6px;
+}
+
+.like .comment {
+    width: 90%;
+    height: 90%;
+}
+
+h3 {
+    padding: 3px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 3px;
+}
+
+.picture {
+    width: 100%;
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+
+@media (max-width: 768px) {
+    
+.container {
+    justify-content: left;
+    flex-wrap: wrap;
+    }
+}
+    
+@media (max-width: 375px) {
+        
+.container {
+    flex-direction: column;
+    }
+}
